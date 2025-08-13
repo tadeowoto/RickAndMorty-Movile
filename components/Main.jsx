@@ -25,7 +25,7 @@ export function Main() {
       }}
     >
       <StatusBar style="auto" />
-      <Text>Characters of rick and morty! </Text>
+      <Text className="text-white">Characters of rick and morty! </Text>
       <FlatList
         data={characters}
         keyExtractor={(character) => character.id.toString()}
