@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { Text, View, FlatList } from "react-native";
 import { fetchCharacters } from "../lib/characters";
 import { useEffect, useState } from "react";
 import { CharacterCard } from "./characterCard";
@@ -20,13 +20,20 @@ export function Main() {
   return (
     <View
       style={{
-        ...styles.container,
         paddingTop: insets.top,
       }}
+      className="w-full h-full"
     >
       <StatusBar style="auto" />
-      <Text className="text-white">Characters of rick and morty! </Text>
+      <Text className="text-white text-2xl p-4 text-center mb-5">
+        Characters of rick and morty!
+      </Text>
       <FlatList
+        className="p-10 w-full h-full flex"
+        contentContainerStyle={{
+          alignItems: "center",
+          justifyContent: "center",
+        }}
         data={characters}
         keyExtractor={(character) => character.id.toString()}
         renderItem={({ item }) => <CharacterCard character={item} />}
@@ -34,14 +41,3 @@ export function Main() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    width: "100%",
-    height: "100%",
-    flex: 1,
-    backgroundColor: "#1a1a1a",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
