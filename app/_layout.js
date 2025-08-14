@@ -12,21 +12,19 @@ export default function Layout() {
       <View className="flex-1">
         <Stack
           screenOptions={{
-            contentStyle: { backgroundColor: "#1e293b", paddingBottom: 16 },
-            headerTitle: "",
+            contentStyle: { backgroundColor: "#1e293b" },
+            headerTitle: "Rick and Morty wiki",
+            headerTitleStyle: {
+              color: "#fff",
+              fontSize: 20,
+              fontWeight: "bold",
+              textAlign: "center",
+              flex: 1,
+            },
             headerStyle: {
               backgroundColor: "#1e293b",
               borderBottomWidth: 0,
             },
-            headerLeft: () => (
-              <View className="">
-                <View className="flex-row items-center justify-between">
-                  <Text className="text-3xl text-white font-bold tracking-tight">
-                    Rick and Morty
-                  </Text>
-                </View>
-              </View>
-            ),
 
             headerRight: () => (
               <Link asChild href="/about">
