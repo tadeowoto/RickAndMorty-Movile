@@ -36,3 +36,7 @@ Una aplicación móvil moderna construida con React Native y Expo que permite a 
 ## Contribuir
 
 ¡Las contribuciones son bienvenidas! No dudes en enviar un Pull Request.
+
+<img width="578" height="1027" alt="Screenshot 2025-08-14 at 11 43 05 AM" src="https://github.com/user-attachments/assets/b79817a3-05b5-4cbb-abfc-3ab626bed718" />
+
+
