@@ -26,7 +26,7 @@ const features = [
 export default function About() {
   return (
     <ScrollView
-      className="flex-1 bg-gradient-to-b from-slate-900 to-slate-800"
+      className="flex-1 bg-gradient-to-b from-slate-900 to-slate-800 bg-gray-900"
       contentContainerStyle={{ paddingBottom: 40 }}
     >
       <View className="relative h-48 overflow-hidden">
