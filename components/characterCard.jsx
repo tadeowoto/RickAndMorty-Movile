@@ -20,7 +20,8 @@ export function CharacterCard({ character }) {
                 {character.name}
               </Text>
               <Text className="text-sm text-gray-400 font-bold tracking-wide">
-                {character.origin.name} - {character.species}
+                {character.origin.name} -{" "}
+                {character.species ?? "no info about species"}
               </Text>
               <Status status={character.status} />
             </View>
