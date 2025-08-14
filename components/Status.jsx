@@ -4,20 +4,39 @@ export function Status({ status }) {
   function getStatusStyles(status) {
     switch (status) {
       case "Alive":
-        return "green-500";
+        return {
+          bg: "bg-emerald-500/10",
+          text: "text-emerald-400",
+          border: "border-emerald-500/20",
+          dot: "bg-emerald-500",
+        };
       case "Dead":
-        return "red-500";
+        return {
+          bg: "bg-red-500/10",
+          text: "text-red-400",
+          border: "border-red-500/20",
+          dot: "bg-red-500",
+        };
       case "unknown":
-        return "gray-500";
       default:
-        return "yellow-500";
+        return {
+          bg: "bg-gray-500/10",
+          text: "text-gray-400",
+          border: "border-gray-500/20",
+          dot: "bg-gray-500",
+        };
     }
   }
-  const statusStyles = getStatusStyles(status);
+  const styles = getStatusStyles(status);
 
   return (
-    <View className={`bg-${statusStyles} px-1 py-1 rounded-full`}>
-      <Text className="font-bold text-md text-white">{status}</Text>
+    <View className="self-start">
+      <View
+        className={`${styles.bg} px-3 py-1 rounded-full border ${styles.border} flex-row items-center gap-2`}
+      >
+        <View className={`w-1.5 h-1.5 rounded-full ${styles.dot}`} />
+        <Text className={`${styles.text} text-sm font-medium`}>{status}</Text>
+      </View>
     </View>
   );
 }
