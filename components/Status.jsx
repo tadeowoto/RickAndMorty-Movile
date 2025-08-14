@@ -1,7 +1,6 @@
 import { View, Text } from "react-native";
 
 export function Status({ status }) {
-  console.log("Status component rendered with status:", status);
   function getStatusStyles(status) {
     switch (status) {
       case "Alive":
